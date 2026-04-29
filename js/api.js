@@ -1,7 +1,6 @@
 // Llave única para identificar los datos en el navegador
 const STORAGE_KEY = 'restaurante_pwa_data';
 
-// 1. Intentamos cargar datos previos, si no existen, usamos el estado inicial
 const bkp = localStorage.getItem(STORAGE_KEY);
 const MostradorLocal = bkp ? JSON.parse(bkp) : {
     colas: {
@@ -25,7 +24,7 @@ const RestaurantAPI = {
             cola.cantidad++;
             MostradorLocal.estadisticas.producidos++;
             
-            save(); // <--- Guardamos en LocalStorage
+            save();
             return true;
         }
         return false;
@@ -38,7 +37,7 @@ const RestaurantAPI = {
             cola.cantidad--;
             MostradorLocal.estadisticas.consumidos++;
             
-            save(); // <--- Guardamos en LocalStorage
+            save(); 
             return p;
         }
         throw new Error("Vacio");
@@ -52,7 +51,6 @@ const RestaurantAPI = {
         return { ...MostradorLocal.estadisticas };
     },
 
-    // Función extra por si quieres resetear todo el restaurante
     async resetRestaurante() {
         localStorage.removeItem(STORAGE_KEY);
         location.reload();

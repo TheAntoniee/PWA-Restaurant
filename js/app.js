@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateOnlineStatus(online, badge) {
     if (!badge) return;
     badge.className = online ? 'online' : 'offline';
-    // Cambiamos el texto porque ya no hay servidor Java, es "Local"
     badge.innerText = online ? 'Simulador Activo' : 'Error de Sistema';
 }
 
@@ -84,8 +83,7 @@ async function consume(tipo) {
         const dish = await RestaurantAPI.getPlatillo(tipo);
         const log = document.getElementById('last-order');
         if (log) log.innerText = `¡Listo! Entregado: ${dish.nombre}`;
-        // En una PWA local, llamamos manualmente a una actualización tras consumir
-        // (O simplemente esperamos al intervalo de 3s)
+
     } catch (e) {
         alert("No hay platillos de ese tipo");
     }

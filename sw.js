@@ -13,8 +13,7 @@ self.addEventListener('install', (e) => {
 });
 
 self.addEventListener('fetch', (e) => {
-  // CORRECCIÓN CRÍTICA: La API de Cache solo soporta GET. 
-  // Si la petición es POST, DELETE o PUT, la dejamos pasar directo al servidor sin cachear.
+  
   if (e.request.method !== 'GET') {
     return fetch(e.request);
   }
