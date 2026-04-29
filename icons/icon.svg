@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0a0a0a" rx="80"/>
+  <!-- Grid dots -->
+  <g fill="#2a2a2a">
+    <circle cx="80"  cy="80"  r="6"/>
+    <circle cx="176" cy="80"  r="6"/>
+    <circle cx="272" cy="80"  r="6"/>
+    <circle cx="368" cy="80"  r="6"/>
+    <circle cx="464" cy="80"  r="6"/>
+    <circle cx="80"  cy="176" r="6"/>
+    <circle cx="464" cy="176" r="6"/>
+    <circle cx="80"  cy="272" r="6"/>
+    <circle cx="464" cy="272" r="6"/>
+    <circle cx="80"  cy="368" r="6"/>
+    <circle cx="464" cy="368" r="6"/>
+    <circle cx="80"  cy="464" r="6"/>
+    <circle cx="176" cy="464" r="6"/>
+    <circle cx="272" cy="464" r="6"/>
+    <circle cx="368" cy="464" r="6"/>
+    <circle cx="464" cy="464" r="6"/>
+  </g>
+  <!-- Main square symbol -->
+  <rect x="160" y="160" width="192" height="192" fill="none" stroke="#e8a020" stroke-width="20" rx="8"/>
+  <!-- Inner cross -->
+  <line x1="256" y1="180" x2="256" y2="332" stroke="#e8a020" stroke-width="12" stroke-linecap="round"/>
+  <line x1="180" y1="256" x2="332" y2="256" stroke="#e8a020" stroke-width="12" stroke-linecap="round"/>
+  <!-- Corner accents -->
+  <rect x="148" y="148" width="24" height="24" fill="#e8a020" rx="2"/>
+  <rect x="340" y="148" width="24" height="24" fill="#e8a020" rx="2"/>
+  <rect x="148" y="340" width="24" height="24" fill="#e8a020" rx="2"/>
+  <rect x="340" y="340" width="24" height="24" fill="#e8a020" rx="2"/>
+</svg>

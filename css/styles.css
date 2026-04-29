@@ -1,0 +1,84 @@
+:root {
+    --bg: #f4f7f6;
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --success: #27ae60;
+}
+
+body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card.wide { grid-column: 1 / -1; }
+
+form { display: flex; flex-direction: column; gap: 10px; }
+input, select, button { padding: 12px; border-radius: 6px; border: 1px solid #ddd; }
+button { cursor: pointer; background: var(--primary); color: white; border: none; transition: 0.3s; }
+button:hover { opacity: 0.9; }
+.btn-success { background: var(--success); }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center; }
+.stat-item { background: #eee; padding: 15px; border-radius: 8px; }
+
+.grid-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.queue-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.queue-card.full {
+    border-color: #e74c3c;
+    background: #fdf2f2;
+}
+
+.queue-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.progress-bar-bg {
+    background: #eee;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-bar-fill.caliente { background: #e74c3c; }
+.progress-bar-fill.frio { background: #3498db; }
+.progress-bar-fill.rapido { background: #f1c40f; }
+
+.queue-status {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    color: #666;
+}
