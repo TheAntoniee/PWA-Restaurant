@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  pwa:
+    build: .
+    image: restaurante-pwa:latest
+    container_name: restaurante-pwa
+    ports:
+      - "80:80"
+    restart: unless-stopped

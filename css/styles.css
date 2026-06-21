@@ -31,7 +31,7 @@ button { cursor: pointer; background: var(--primary); color: white; border: none
 button:hover { opacity: 0.9; }
 .btn-success { background: var(--success); }
 
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; text-align: center; }
+.stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; text-align: center; }
 .stat-item { background: #eee; padding: 15px; border-radius: 8px; }
 
 .grid-display {
@@ -82,3 +82,6 @@ button:hover { opacity: 0.9; }
     margin-top: 8px;
     color: #666;
 }
+#status-badge { padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
+#status-badge.online  { background: #27ae60; color: white; }
+#status-badge.offline { background: #e74c3c; color: white; }
